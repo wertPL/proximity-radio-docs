@@ -1,6 +1,6 @@
 # Installation
 
-Proximity Radio runs on modern Paper servers and does not require players to install a mod.
+Proximity Radio is a Paper plugin. Players can join with a normal Minecraft client; the client mod is optional.
 
 ## Requirements
 
@@ -68,4 +68,3 @@ Custom crafting ingredients may also resolve items from Nexo, Oraxen, ItemsAdder
 ## Next step
 
 Continue to [Your First Radio](first-radio.md) to add music, build the pack, and place a radio.
-

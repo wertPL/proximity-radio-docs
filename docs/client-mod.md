@@ -7,11 +7,11 @@
 - exact joining at the current track position;
 - responsive seeking and synchronized position updates;
 - pause, resume, and stop control without losing server state;
-- enhanced spatial and directional playback;
+- mod-side spatial and directional playback;
 - local extraction of track audio from the same generated resource-pack ZIP;
 - correct stop behavior when disconnecting from the server.
 
-The server remains authoritative. A local client cannot create tracks, tiers, or radio state that the server does not expose.
+The server still controls the radio. The mod cannot add tracks, tiers, or change playback without a server command.
 
 ## Enable or disable support
 
@@ -26,8 +26,8 @@ When disabled, every player uses the vanilla resource-pack behavior even if the 
 
 1. Use a compatible Fabric installation for the player's Minecraft version.
 2. Install the matching Proximity Radio Client build.
-3. Join the server normally.
-4. Run `/radio status` to confirm that the server recognized the enhanced client.
+3. Join the server.
+4. Run `/radio status` and check that the client is detected.
 
 The direct client page is also available through `/radio mod`.
 
@@ -35,11 +35,10 @@ The direct client page is also available through `/radio mod`.
 
 The client mod does not require a second audio host. It reads the same URL configured for the Minecraft resource pack and extracts the required OGG track locally.
 
-Therefore the configured pack URL must still be reachable and return the ZIP directly, even on a modded-only server.
+The configured pack URL must return the ZIP directly, including on servers where every player uses the mod.
 
 ## Mixed servers
 
 Modded and vanilla users can listen to the same placed radio. The active track, loop, shuffle, queue, volume, and range remain shared. Only delivery and timestamp accuracy differ.
 
 See [Controls and Synchronization](controls-sync.md) for vanilla join modes and synchronization points.
-

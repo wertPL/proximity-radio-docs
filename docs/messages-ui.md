@@ -16,7 +16,7 @@ radio-placed: "<green>Placed <radio>.</green>"
 action-bar-now-playing: "<green>♫</green> <white><track></white> <gray>by <artist></gray>"
 ```
 
-Different messages expose different placeholders. Preserve placeholders used by the original line unless you intentionally want to remove that information.
+Each message has its own placeholders. Keep the placeholders from the original line unless that value should no longer be shown.
 
 ## Native radio interface
 
@@ -38,9 +38,8 @@ The Free messages shown when an administrator:
 - exceeds the 12-track pack limit; or
 - adds a track longer than six minutes
 
-are hardcoded in the plugin. They are intentionally not read from `messages.yml` and are visible only to administrators.
+are stored in the plugin code, not in `messages.yml`. Only administrators receive them.
 
 ## Resource-pack disconnect text
 
 The normal resource-pack prompt, success notification, and disconnect messages remain configurable. The 20-second default grace period is controlled by `config.yml`, not `messages.yml`.
-

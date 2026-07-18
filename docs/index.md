@@ -3,9 +3,9 @@
     <span class="hero-kicker">Spatial music for Minecraft</span>
     <h1>Make the world sound alive.</h1>
     <p class="hero-lead">
-      Proximity Radio turns placeable radios into synchronized, distance-aware music sources.
-      Vanilla players use a generated resource pack, while the optional client mod adds exact
-      seeking, smooth controls, and enhanced playback.
+      Place a radio, choose a track, and nearby players will hear it from that location.
+      Vanilla players use the server resource pack. Players with the optional mod also get
+      exact seeking, pause, and resume controls.
     </p>
     <div class="hero-actions">
       <a class="md-button md-button--primary" href="installation/">Install the plugin</a>
@@ -27,14 +27,14 @@
 </section>
 
 <div class="quick-facts">
-  <div class="quick-fact"><strong>Paper 1.21.7 → 26.2+</strong><span>Built for modern Paper servers</span></div>
+  <div class="quick-fact"><strong>Paper 1.21.7 → 26.2+</strong><span>Paper is the supported server platform</span></div>
   <div class="quick-fact"><strong>Java 21</strong><span>Required by the plugin and server</span></div>
   <div class="quick-fact"><strong>Vanilla + optional mod</strong><span>One radio system for mixed clients</span></div>
 </div>
 
-## One system, two playback paths
+## How playback works
 
-Every listener hears the same radio state. The delivery method changes automatically depending on the client.
+The server keeps one playback state for each radio. It sends normal Minecraft sounds to vanilla players and timestamped audio commands to players using the mod.
 
 <div class="feature-grid">
   <article class="feature-card">
@@ -42,16 +42,16 @@ Every listener hears the same radio state. The delivery method changes automatic
     <p>Receive a generated Minecraft resource pack and hear native positional sounds without installing anything locally.</p>
   </article>
   <article class="feature-card">
-    <h3>Enhanced clients</h3>
-    <p>Use the optional Fabric client for accurate joining, seeking, pause and resume behavior while keeping server authority.</p>
+    <h3>Players with the mod</h3>
+    <p>The optional Fabric client can join at the current timestamp and supports seeking, pause, and resume.</p>
   </article>
   <article class="feature-card">
     <h3>Physical radios</h3>
     <p>Place textured radio heads, define hearing distance, protect ownership, show holograms, and control playback through native dialogs.</p>
   </article>
   <article class="feature-card">
-    <h3>Server-ready controls</h3>
-    <p>Configure tiers, permissions, recipes, WorldGuard regions, PlaceholderAPI output, grief prevention, particles, and UI text.</p>
+    <h3>Server settings</h3>
+    <p>Tiers control permissions, recipes, range, holograms, particles, protection, and the available tracks.</p>
   </article>
 </div>
 
@@ -69,7 +69,7 @@ Every listener hears the same radio state. The delivery method changes automatic
 <div class="edition-grid">
   <article class="edition-card">
     <h3>Free</h3>
-    <p>A complete starting edition with the Default and Admin radio tiers, up to 12 tracks, a six-minute limit per track, and full optional-client support.</p>
+    <p>Includes the Default and Admin tiers, up to 12 tracks, a six-minute limit per track, and support for the optional client mod.</p>
   </article>
   <article class="edition-card edition-card--pro">
     <h3>Pro</h3>
@@ -79,6 +79,5 @@ Every listener hears the same radio state. The delivery method changes automatic
 
 [Compare Free and Pro →](editions.md){ .md-button }
 
-!!! tip "First time here?"
+!!! tip "Quick setup"
     Follow [Installation](installation.md), then [Your First Radio](first-radio.md). The quick path takes you from an empty server to a working radio pack without requiring the client mod.
-

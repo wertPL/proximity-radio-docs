@@ -47,7 +47,7 @@ Identifier: `proximityradio`
 
 | Placeholder | Result |
 | --- | --- |
-| `%proximityradio_modded%` | `true` when the player has a compatible enhanced client. |
+| `%proximityradio_modded%` | `true` when the player has a compatible client mod. |
 | `%proximityradio_nearby%` | `true` when a radio is in range. |
 | `%proximityradio_radio_id%` | UUID of the nearby placed radio. |
 | `%proximityradio_tier%` | Tier ID. |
@@ -79,5 +79,4 @@ Custom-item ingredients use exact item matching. A normal item with the same bas
 
 ## Optional client
 
-The client uses a plugin messaging channel rather than a server-side dependency. Incompatible protocol versions are ignored safely and logged so the player can install a matching build.
-
+The client connects through a plugin messaging channel. If its protocol version does not match, the server logs the mismatch and uses vanilla playback for that player.

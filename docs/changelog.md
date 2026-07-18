@@ -28,5 +28,4 @@ Initial documented release of Proximity Radio Free and Pro.
 - Maximum of 12 tracks.
 - Maximum duration of six minutes per track.
 - Hardcoded administrator-only Pro upgrade notices.
-- Required bundled tiers automatically restored after deletion.
-
+- Restores a missing bundled tier during startup or `/radio reload`.

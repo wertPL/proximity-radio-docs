@@ -121,16 +121,16 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(17rem, 0.85fr);
-  gap: clamp(2rem, 6vw, 5.5rem);
+  gap: clamp(1.5rem, 3vw, 3rem);
   align-items: center;
   overflow: hidden;
-  margin: 1.1rem 0 2.2rem;
+  margin: 1rem 0 1.8rem;
   border: 1px solid var(--pr-line);
-  border-radius: 1.5rem;
+  border-radius: 1.2rem;
   background:
     linear-gradient(125deg, rgba(13, 45, 28, 0.96), rgba(7, 24, 16, 0.97) 58%, rgba(9, 51, 39, 0.94));
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255, 255, 255, 0.05);
-  padding: clamp(2rem, 6vw, 5rem);
+  padding: clamp(2rem, 3.5vw, 3.5rem);
 }
 
 .radio-hero::before {
@@ -171,32 +171,37 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-size: clamp(2.55rem, 4.4vw, 4.15rem);
   font-weight: 900;
   line-height: 0.94;
   letter-spacing: -0.055em;
 }
 
 .radio-hero .hero-lead {
-  max-width: 43rem;
-  margin: 1.4rem 0 0;
+  max-width: 38rem;
+  margin: 1.05rem 0 0;
   color: #c7dfcf;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.7;
+  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+  line-height: 1.62;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.7rem;
+  margin-top: 1.25rem;
+}
+
+.hero-actions .md-button {
+  padding: 0.58rem 0.9rem;
+  font-size: 0.76rem;
 }
 
 .signal-card {
   position: relative;
-  min-height: 22rem;
+  min-height: 17rem;
   border: 1px solid rgba(145, 255, 187, 0.18);
-  border-radius: 1.25rem;
+  border-radius: 1rem;
   background: rgba(4, 16, 10, 0.65);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025), 0 22px 60px rgba(0, 0, 0, 0.28);
   padding: 1.1rem;
@@ -231,12 +236,12 @@ body {
 .signal-card__art {
   display: grid;
   place-items: center;
-  min-height: 14rem;
+  min-height: 10.5rem;
 }
 
 .signal-card__art img {
-  width: min(13rem, 72%);
-  border-radius: 1.8rem;
+  width: min(10rem, 68%);
+  border-radius: 1.35rem;
   filter: hue-rotate(72deg) saturate(0.92) drop-shadow(0 18px 42px rgba(36, 226, 126, 0.19));
 }
 
@@ -365,13 +370,93 @@ body {
   font-size: 0.78rem;
 }
 
-.comparison-table td:first-child {
-  font-weight: 700;
+.comparison-wrap {
+  overflow-x: auto;
+  margin: 1.2rem 0 2rem;
+  border: 1px solid rgba(91, 239, 149, 0.3);
+  border-radius: 1rem;
+  background: rgba(7, 25, 15, 0.62);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.2);
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 34rem;
+  margin: 0 !important;
+  border: 0 !important;
+  border-collapse: collapse;
+  background: transparent !important;
+}
+
+.comparison-table thead {
+  background: linear-gradient(90deg, rgba(18, 79, 43, 0.96), rgba(10, 55, 38, 0.96));
+}
+
+.comparison-table th {
+  color: #effff4;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comparison-table :is(th, td) {
+  border: 0;
+  padding: 0.9rem 1rem;
+  vertical-align: middle;
 }
 
 .comparison-table th:nth-child(n+2),
 .comparison-table td:nth-child(n+2) {
+  width: 25%;
   text-align: center;
+}
+
+.comparison-table td:first-child {
+  width: 50%;
+  color: #e7f6eb;
+  font-weight: 700;
+}
+
+.comparison-table tbody tr {
+  border-top: 1px solid rgba(96, 221, 144, 0.13);
+  transition: background-color 130ms ease;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background: rgba(68, 208, 122, 0.035);
+}
+
+.comparison-table tbody tr:hover {
+  background: rgba(68, 229, 138, 0.075);
+}
+
+.table-yes {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--pr-mint);
+  font-weight: 750;
+}
+
+.table-yes::before {
+  display: grid;
+  place-items: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background: rgba(67, 229, 138, 0.16);
+  color: var(--pr-green);
+  font-size: 0.72rem;
+  content: "✓";
+}
+
+.table-limit {
+  color: #d2e5d7;
+}
+
+.table-pro {
+  color: var(--pr-lime);
+  font-weight: 750;
 }
 
 .md-typeset .admonition,
@@ -383,15 +468,15 @@ body {
 @media (max-width: 760px) {
   .radio-hero {
     grid-template-columns: 1fr;
-    padding: 1.6rem;
+    padding: 1.35rem;
   }
 
   .signal-card {
-    min-height: 17rem;
+    min-height: 14.5rem;
   }
 
   .signal-card__art {
-    min-height: 10rem;
+    min-height: 8.5rem;
   }
 
   .quick-facts,
@@ -400,29 +485,94 @@ body {
   .flow-line {
     grid-template-columns: 1fr;
   }
+
+  .radio-hero h1 {
+    font-size: clamp(2.35rem, 12vw, 3rem);
+  }
+
+  .comparison-wrap {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .comparison-table {
+    display: block;
+    min-width: 0;
+  }
+
+  .comparison-table thead {
+    display: none;
+  }
+
+  .comparison-table tbody {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .comparison-table tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: hidden;
+    border: 1px solid rgba(91, 239, 149, 0.22);
+    border-radius: 0.8rem;
+    background: rgba(8, 30, 18, 0.72);
+  }
+
+  .comparison-table :is(td, td:nth-child(n+2), td:first-child) {
+    width: auto;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .comparison-table td:first-child {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid rgba(91, 239, 149, 0.15);
+    background: rgba(44, 173, 94, 0.08);
+  }
+
+  .comparison-table td:nth-child(n+2)::before {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #85a990;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .comparison-table td:nth-child(2)::before {
+    content: "Free";
+  }
+
+  .comparison-table td:nth-child(3)::before {
+    content: "Pro";
+  }
 }
 
 @media (min-width: 761px) and (max-width: 1400px) {
   .radio-hero {
-    grid-template-columns: minmax(0, 1.15fr) minmax(12rem, 0.85fr);
-    gap: 1.5rem;
-    padding: 2.3rem;
+    grid-template-columns: minmax(0, 1.35fr) minmax(11rem, 0.65fr);
+    gap: 1.25rem;
+    padding: 1.65rem;
   }
 
   .radio-hero h1 {
-    font-size: clamp(2.45rem, 4.6vw, 3.7rem);
+    font-size: clamp(2.3rem, 3.8vw, 3rem);
   }
 
   .radio-hero .hero-lead {
-    font-size: 1rem;
+    font-size: 0.94rem;
+    line-height: 1.55;
   }
 
   .signal-card {
-    min-height: 17rem;
+    min-height: 13.5rem;
   }
 
   .signal-card__art {
-    min-height: 10.5rem;
+    min-height: 7.6rem;
   }
 }
 

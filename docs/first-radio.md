@@ -16,7 +16,7 @@ or:
 plugins/ProximityRadioPro/tracks/lobby-theme.ogg
 ```
 
-OGG is the fastest first test because it does not require FFmpeg. MP3, WAV, FLAC, M4A, AAC, Opus, WMA, AIFF, and AIF are also supported and converted automatically.
+Use OGG for the first test because it does not need FFmpeg. MP3, WAV, FLAC, M4A, AAC, Opus, WMA, AIFF, and AIF are converted when `/radio zip` runs.
 
 ## 2. Build the resource pack
 
@@ -84,6 +84,6 @@ Join without the optional mod and accept the server resource pack. Walk away fro
 !!! note "Required pack grace period"
     By default, a player who declines the required pack or whose download fails is given 20 seconds before being disconnected. Change `resource-pack.required-kick-delay-seconds` if needed.
 
-## 6. Optional enhanced client
+## 6. Optional client mod
 
-Install [Proximity Radio Client](https://modrinth.com/mod/proximity-radio-client) to test exact synchronization, seeking, pausing, and enhanced playback. Vanilla and modded players may listen together.
+Install [Proximity Radio Client](https://modrinth.com/mod/proximity-radio-client) to test exact synchronization, seeking, pause, and resume. Vanilla and modded players can use the same radio.

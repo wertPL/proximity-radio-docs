@@ -27,9 +27,9 @@ When protocols do not match, the server logs a warning and keeps the player on t
 
 ## Resource-pack format
 
-The pack builder writes a supported format range for the targeted modern Minecraft versions. Always rebuild the pack after upgrading the plugin so metadata and generated sound-channel entries match the installed build.
+The generated pack contains the format range used by the supported Minecraft versions. Run `/radio zip` after a plugin update so its metadata and sound-channel entries match the installed JAR.
 
-## Recommended upgrade sequence
+## Updating the plugin
 
 1. Back up the plugin data directory.
 2. Stop the server.
@@ -38,4 +38,3 @@ The pack builder writes a supported format range for the targeted modern Minecra
 5. Run `/radio zip`.
 6. Run `/radio reload`.
 7. Test one vanilla and one modded client when available.
-

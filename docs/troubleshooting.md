@@ -54,7 +54,7 @@ The HTTP port is unrelated to the Simple Voice Chat UDP port.
 
 ## A custom tier is ignored
 
-- In Free, custom tiers are intentionally ignored; only `default-radio` and `admin-radio` load.
+- Free ignores custom tiers and loads only `default-radio` and `admin-radio`.
 - In Pro, validate the filename, YAML indentation, unique `id`, and required sections.
 - Tier IDs must start with a lowercase letter or digit and contain only lowercase letters, digits, `_`, and `-`.
 - Run `/radio reload` and inspect the console.
@@ -83,4 +83,3 @@ Rebuild the resource pack with `/radio zip`. Current builds generate separate so
 - Quote strings containing `:`, `#`, `{}`, or MiniMessage when in doubt.
 - Restore the last working file from backup.
 - Compare the damaged file with the embedded defaults from the plugin JAR.
-

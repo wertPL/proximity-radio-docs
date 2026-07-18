@@ -2,9 +2,6 @@ site_name: Proximity Radio Documentation
 site_description: Installation, configuration, audio, client mod, and administration documentation for Proximity Radio.
 site_author: ProximityRadio
 site_url: https://wertpl.github.io/proximity-radio-docs/
-repo_url: https://github.com/wertPL/proximity-radio-docs
-repo_name: wertPL/proximity-radio-docs
-edit_uri: edit/main/docs/
 
 theme:
   name: material

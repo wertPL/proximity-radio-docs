@@ -1,23 +1,25 @@
 # Free vs Pro
 
-Both editions use the same playback engine, menus, local client integration, resource-pack system, protection, and server integrations. Free limits content scale; it does not remove the core radio experience.
+Free and Pro play audio in the same way and support the same client mod and integrations. The differences are the number of tracks, track length, and custom radio tiers.
 
-<table class="comparison-table">
-  <thead>
-    <tr><th>Feature</th><th>Free</th><th>Pro</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Vanilla resource-pack playback</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>Optional enhanced client</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>Spatial and directional audio</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>Menus, holograms, particles, recipes</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>WorldGuard and PlaceholderAPI</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>Available radio tiers</td><td><code>default-radio</code> and <code>admin-radio</code></td><td>Unlimited custom tiers</td></tr>
-    <tr><td>Track library</td><td>Up to 12 tracks</td><td>Unlimited</td></tr>
-    <tr><td>Maximum track length</td><td>6 minutes</td><td>Unlimited by edition</td></tr>
-    <tr><td><code>/radio tier create</code></td><td>Upgrade notice</td><td>Creates a tier template</td></tr>
-  </tbody>
-</table>
+<div class="comparison-wrap">
+  <table class="comparison-table">
+    <thead>
+      <tr><th>Feature</th><th>Free</th><th>Pro</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Vanilla resource-pack playback</td><td><span class="table-yes">Included</span></td><td><span class="table-yes">Included</span></td></tr>
+      <tr><td>Optional client mod</td><td><span class="table-yes">Included</span></td><td><span class="table-yes">Included</span></td></tr>
+      <tr><td>Spatial and directional audio</td><td><span class="table-yes">Included</span></td><td><span class="table-yes">Included</span></td></tr>
+      <tr><td>Menus, holograms, particles, and recipes</td><td><span class="table-yes">Included</span></td><td><span class="table-yes">Included</span></td></tr>
+      <tr><td>WorldGuard and PlaceholderAPI</td><td><span class="table-yes">Included</span></td><td><span class="table-yes">Included</span></td></tr>
+      <tr><td>Radio tiers</td><td><span class="table-limit">Default and Admin</span></td><td><span class="table-pro">Unlimited custom tiers</span></td></tr>
+      <tr><td>Track library</td><td><span class="table-limit">Up to 12 tracks</span></td><td><span class="table-pro">Unlimited</span></td></tr>
+      <tr><td>Maximum track length</td><td><span class="table-limit">6 minutes</span></td><td><span class="table-pro">No edition limit</span></td></tr>
+      <tr><td><code>/radio tier create</code></td><td><span class="table-limit">Shows the Pro notice</span></td><td><span class="table-pro">Creates the tier file</span></td></tr>
+    </tbody>
+  </table>
+</div>
 
 ## How Free enforces its limits
 
@@ -43,4 +45,3 @@ Free checks limits inside the configuration and pack-building services, not only
 
 !!! warning
     Keep a backup before moving runtime data. Never run both editions at the same time.
-

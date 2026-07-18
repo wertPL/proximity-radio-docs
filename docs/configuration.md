@@ -16,7 +16,7 @@ disabled-worlds: []
 | `hologram-update-interval-ticks` | Global maximum refresh rate for radio holograms. Minimum: 5 ticks. |
 | `disabled-worlds` | World names where radios cannot be placed or played. |
 
-Lower intervals react faster and use more server time. The defaults are appropriate for most servers.
+Lower intervals react faster but run the task more often. Start with the default values and change them only if the server needs different timing.
 
 ## Resource pack
 
@@ -37,7 +37,7 @@ resource-pack:
 
 - `required` controls whether refusal or failure eventually disconnects the player.
 - `required-kick-delay-seconds` provides download time before that disconnect. Default: 20 seconds.
-- `send-on-join` automatically offers the current pack.
+- `send-on-join` sends the current pack after a player joins.
 - `join-delay-ticks` delays that offer after login.
 - `notify-on-load` sends the configurable success message.
 - `hosting-mode` accepts `BUILTIN` or `EXTERNAL`.
@@ -55,7 +55,7 @@ audio:
   cache-converted-audio: true
 ```
 
-Changing conversion options affects newly converted files. Disable the cache temporarily or clear only `cache/converted/` while the server is stopped when you intentionally need every track reconverted.
+Conversion settings apply to new output files. To rebuild every track, disable the cache for one build or stop the server and clear `cache/converted/`.
 
 !!! warning
     Do not delete the original files from `tracks/` and do not edit generated OGG files while `/radio zip` is running.
@@ -67,7 +67,7 @@ client-mod:
   enabled: true
 ```
 
-This accepts enhanced-client handshakes. Turning it off forces vanilla playback behavior for everyone.
+This allows the optional client mod to connect. When it is `false`, every player uses vanilla resource-pack playback.
 
 ## Integrations
 
@@ -88,7 +88,7 @@ These options have no effect when the corresponding plugin is not installed. Wor
 debug: false
 ```
 
-Keep debug logging disabled normally. Enable it temporarily while diagnosing client messages, playback decisions, or integration behavior, then turn it off again.
+Leave this disabled unless you are checking a problem. Debug mode writes extra playback and integration details to the console.
 
 ## Safe reload procedure
 
@@ -98,4 +98,3 @@ Keep debug logging disabled normally. Enable it temporarily while diagnosing cli
 4. Check the console for YAML or tier errors.
 5. Run `/radio diagnose` if playback or hosting is still unclear.
 6. Run `/radio zip` separately when audio or sound distance data changed.
-

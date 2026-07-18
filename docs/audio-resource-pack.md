@@ -1,6 +1,6 @@
 # Tracks and Resource Pack
 
-`/radio zip` is the center of the audio workflow. It scans source files, converts when necessary, reads metadata, rebuilds the track registry, and creates a deterministic Minecraft resource pack.
+Run `/radio zip` after changing the music library. The command scans the source files, converts non-OGG audio, reads track metadata, updates `tracks.yml`, and builds the Minecraft resource pack.
 
 ## Supported source formats
 
@@ -38,7 +38,7 @@ audio:
 ```
 
 - `channels: 1` produces mono audio and is recommended for positional sound.
-- `sample-rate: 44100` is a reliable default for Minecraft playback.
+- `sample-rate: 44100` works with all supported server versions.
 - `vorbis-quality` accepts `0` through `10`; higher values increase quality and file size.
 - `cache-converted-audio` reuses OGG output when the source file has not changed.
 
@@ -122,4 +122,3 @@ Vanilla radio playback waits until Minecraft confirms that the pack loaded. When
 - No more than 12 supported source files may be present when `/radio zip` runs.
 - A track longer than six minutes is converted or inspected, then omitted from the registry and ZIP.
 - The administrator running the command receives a hardcoded English explanation and a Pro link.
-
