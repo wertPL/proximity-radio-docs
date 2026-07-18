@@ -68,10 +68,10 @@ Use `RESTART_TRACK` if a joining vanilla player should restart playback for ever
 ## The client mod is not detected
 
 1. Confirm `client-mod.enabled: true`.
-2. Install the client build matching the Minecraft and protocol version.
+2. Install the client build made for your Minecraft version.
 3. Reconnect fully; do not use a plugin hot reload.
 4. Run `/radio status`.
-5. Look for an incompatible-protocol warning in the console.
+5. Check the console for a client compatibility warning.
 
 ## One radio affects another
 

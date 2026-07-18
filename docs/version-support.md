@@ -17,17 +17,12 @@ The plugin declares `api-version: 1.21.7`, so servers older than 1.21.7 should r
 
 Vanilla players need only a Minecraft version compatible with the server and the generated resource pack.
 
-The enhanced client must match:
+The client mod must match:
 
 - the player's Minecraft version;
-- the correct mod loader and dependencies;
-- the server plugin's client protocol.
+- the correct mod loader and dependencies.
 
-When protocols do not match, the server logs a warning and keeps the player on the vanilla fallback path.
-
-## Resource-pack format
-
-The generated pack contains the format range used by the supported Minecraft versions. Run `/radio zip` after a plugin update so its metadata and sound-channel entries match the installed JAR.
+If the mod is incompatible, the player uses vanilla resource-pack playback instead.
 
 ## Updating the plugin
 

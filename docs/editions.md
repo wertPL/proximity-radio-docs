@@ -15,19 +15,6 @@ Free and Pro play audio in the same way and support the same client mod and inte
   </table>
 </div>
 
-## How Free enforces its limits
-
-Free checks limits inside the configuration and pack-building services, not only in command text.
-
-- Only `radios/default-radio.yml` and `radios/admin-radio.yml` are loaded.
-- Additional tier YAML files are ignored.
-- Missing bundled tier files are restored at startup and `/radio reload`.
-- A changed ID inside a bundled tier file is restored to the required bundled tier.
-- More than 12 supported files in `tracks/` blocks `/radio zip`.
-- Tracks over six minutes are omitted from the ZIP and track registry.
-- Cached OGG duration is read from the audio file instead of trusting an edited `tracks.yml` value.
-- Upgrade notices are hardcoded, visible only to administrators, and cannot be edited in `messages.yml`.
-
 ## Moving from Free to Pro
 
 1. Stop the server.

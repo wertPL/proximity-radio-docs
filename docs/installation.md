@@ -24,37 +24,23 @@ Purpur builds based on a compatible Paper version will usually work, but Paper i
 5. Stop the server before the initial configuration.
 
 !!! danger "Do not install Free and Pro together"
-    Both editions provide the same `/radio` command and network channel. Choose one edition per server.
+    Both editions register `/radio` and are not designed to run together. Choose one edition per server.
 
-## Generated directories
+## Data folder
 
-=== "Free"
+Free stores its files in:
 
-    ```text
-    plugins/ProximityRadioFree/
-    ├─ config.yml
-    ├─ messages.yml
-    ├─ radios/
-    ├─ tracks/
-    ├─ cache/converted/
-    ├─ data/
-    └─ resourcepack/
-    ```
+```text
+plugins/ProximityRadioFree/
+```
 
-=== "Pro"
+Pro stores them in:
 
-    ```text
-    plugins/ProximityRadioPro/
-    ├─ config.yml
-    ├─ messages.yml
-    ├─ radios/
-    ├─ tracks/
-    ├─ cache/converted/
-    ├─ data/
-    └─ resourcepack/
-    ```
+```text
+plugins/ProximityRadioPro/
+```
 
-The folder name is different for each edition. When upgrading from Free to Pro, stop the server and copy the settings, tracks, and data you want to keep into `plugins/ProximityRadioPro/` before starting Pro.
+The `tracks/`, `radios/`, and `resourcepack/` directories are created inside that folder. When upgrading, stop the server before copying data from the Free folder to the Pro folder.
 
 ## Optional dependencies
 

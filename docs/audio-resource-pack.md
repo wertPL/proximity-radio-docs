@@ -25,7 +25,7 @@ The filename becomes a lowercase track ID:
 
 Embedded title and artist metadata is used when available. Otherwise, the original filename becomes the title. Duplicate normalized IDs receive numeric suffixes.
 
-The generated `tracks.yml` is a registry, not the source of truth for new files. Add or remove audio in `tracks/`, then run `/radio zip` again.
+Add or remove audio files in `tracks/`, then run `/radio zip` again. Do not add new tracks manually to `tracks.yml`.
 
 ## Conversion settings
 
@@ -54,19 +54,6 @@ If automatic installation is blocked by the hosting provider:
 4. Run `/radio zip` again.
 
 OGG-only libraries do not require FFmpeg or FFprobe.
-
-## What the generated pack contains
-
-```text
-resourcepack.zip
-├─ pack.mcmeta
-├─ pack.png
-└─ assets/proximityradio/
-   ├─ sounds.json
-   └─ sounds/tracks/*.ogg
-```
-
-The pack includes separate generated sound channels for placed radios. This prevents stopping one nearby radio from stopping another radio that happens to play the same track.
 
 Run `/radio zip` again after:
 
@@ -116,9 +103,3 @@ resource-pack:
 ```
 
 Vanilla radio playback waits until Minecraft confirms that the pack loaded. When the pack is required, refusal and download failure use the configured grace period before disconnecting the player.
-
-## Free edition limits
-
-- No more than 12 supported source files may be present when `/radio zip` runs.
-- A track longer than six minutes is converted or inspected, then omitted from the registry and ZIP.
-- The administrator running the command receives a hardcoded English explanation and a Pro link.

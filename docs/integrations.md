@@ -76,7 +76,3 @@ Tier recipes recognize these namespaces:
 - `mythic:` or `mythicmobs:`
 
 Custom-item ingredients use exact item matching. A normal item with the same base Minecraft material will not satisfy the recipe.
-
-## Optional client
-
-The client connects through a plugin messaging channel. If its protocol version does not match, the server logs the mismatch and uses vanilla playback for that player.

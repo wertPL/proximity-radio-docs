@@ -31,7 +31,7 @@ The main command is `/radio`; `/pradio` is an alias.
 | `/radio zip` | Scan audio and build the resource pack. | `proximityradio.admin.zip` |
 | `/radio force <all\|player>` | Send the current pack request again. | `proximityradio.admin.force` |
 | `/radio tier list` | List loaded radio tiers. | `proximityradio.admin.tier` |
-| `/radio tier create <id>` | Create a tier template in Pro; show the Free upgrade notice in Free. | `proximityradio.admin.tier` |
+| `/radio tier create <id>` | Create a custom radio tier (Pro only). | `proximityradio.admin.tier` |
 | `/radio diagnose` | Display environment, integration, tool, pack, and URL status. | `proximityradio.admin.diagnose` |
 
 ## Permission nodes
@@ -56,4 +56,3 @@ The top-level `proximityradio.admin` node is convenient for operators. For staff
 ## Console use
 
 Administrative commands such as `zip`, `reload`, `force`, `tier`, and `diagnose` can be run from the console. Player-context commands require an in-game player.
-

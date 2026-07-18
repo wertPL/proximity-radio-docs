@@ -80,7 +80,6 @@ nav:
   - Help:
       - Troubleshooting: troubleshooting.md
       - Version Support: version-support.md
-      - Changelog: changelog.md
 
 extra:
   generator: false
