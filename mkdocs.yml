@@ -1,0 +1,92 @@
+site_name: Proximity Radio Documentation
+site_description: Installation, configuration, audio, client mod, and administration documentation for Proximity Radio.
+site_author: ProximityRadio
+
+theme:
+  name: material
+  logo: assets/radio-mark.svg
+  favicon: assets/radio-mark.svg
+  language: en
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-sunny
+        name: Use light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Use dark mode
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - Start Here:
+      - Installation: installation.md
+      - Your First Radio: first-radio.md
+      - Free vs Pro: editions.md
+  - Audio & Playback:
+      - Tracks and Resource Pack: audio-resource-pack.md
+      - Controls and Synchronization: controls-sync.md
+      - Optional Client Mod: client-mod.md
+  - Configuration:
+      - Main Configuration: configuration.md
+      - Radio Tiers: radio-tiers.md
+      - Messages and UI: messages-ui.md
+  - Reference:
+      - Commands and Permissions: commands-permissions.md
+      - Integrations: integrations.md
+  - Help:
+      - Troubleshooting: troubleshooting.md
+      - Version Support: version-support.md
+      - Changelog: changelog.md
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/puzzle-piece
+      link: https://modrinth.com/mod/proximity-radio-client
+      name: Proximity Radio Client
+
+copyright: Copyright &copy; 2026 Proximity Radio
+
