@@ -27,7 +27,7 @@
 </section>
 
 <div class="quick-facts">
-  <div class="quick-fact"><strong>Paper 1.21.7 → 26.2+</strong><span>Paper is the supported server platform</span></div>
+  <div class="quick-fact"><strong>Paper 1.21.7 and newer</strong><span>Paper is the supported server platform</span></div>
   <div class="quick-fact"><strong>Java 21</strong><span>Required by the plugin and server</span></div>
   <div class="quick-fact"><strong>Vanilla + optional mod</strong><span>One radio system for mixed clients</span></div>
 </div>

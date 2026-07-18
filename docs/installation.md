@@ -6,7 +6,7 @@ Proximity Radio is a Paper plugin. Players can join with a normal Minecraft clie
 
 | Component | Requirement |
 | --- | --- |
-| Server | Paper `1.21.7` through `26.2+` |
+| Server | Paper `1.21.7` and newer |
 | Java | Java `21` |
 | Client | Vanilla Minecraft, or the optional Proximity Radio Client |
 | Optional plugins | WorldGuard and PlaceholderAPI |

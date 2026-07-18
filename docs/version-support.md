@@ -4,7 +4,7 @@
 
 | Component | Supported range |
 | --- | --- |
-| Paper | `1.21.7` through `26.2+` |
+| Paper | `1.21.7` and newer |
 | Java | `21` |
 | Purpur | Expected on builds based on a compatible Paper API; Paper remains the tested target |
 | Spigot | Not supported |
