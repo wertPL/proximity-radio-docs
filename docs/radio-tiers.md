@@ -153,11 +153,11 @@ crafting:
   enabled: true
   ingredients:
     1: "minecraft:iron_ingot"
-    2: "nexo:antenna"
+    2: "minecraft:copper_ingot"
     3: ""
-    4: "oraxen:speaker"
+    4: "minecraft:note_block"
     5: "itemsadder:myitems:radio_core"
-    6: "mythic:MagicCrystal"
+    6: "minecraft:amethyst_shard"
     7: ""
     8: "minecraft:redstone"
     9: ""
@@ -171,5 +171,4 @@ Slots match a 3×3 crafting table:
 7 8 9
 ```
 
-Supported prefixes are `minecraft:`, `nexo:`, `oraxen:`, `itemsadder:`/`ia:`, and `mythic:`/`mythicmobs:`. Custom ingredients use exact item matching.
-
+Supported prefixes are `minecraft:` and `itemsadder:`/`ia:`. Custom ingredients use exact item matching.

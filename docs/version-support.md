@@ -1,5 +1,7 @@
 # Version Support
 
+Current server-plugin release: `1.0.1` for both Free and Pro.
+
 ## Server compatibility
 
 | Component | Supported range |

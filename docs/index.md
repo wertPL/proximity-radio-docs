@@ -60,7 +60,7 @@ The server keeps one playback state for each radio. It sends normal Minecraft so
 <div class="flow-line">
   <div class="flow-step"><strong>Add tracks</strong><span>Drop OGG, MP3, WAV, FLAC, or another supported format into the tracks folder.</span></div>
   <div class="flow-step"><strong>Build the pack</strong><span>Run <code>/radio zip</code> to validate, convert, index, and package the library.</span></div>
-  <div class="flow-step"><strong>Publish it</strong><span>Use the built-in HTTP server or provide a direct external ZIP URL.</span></div>
+  <div class="flow-step"><strong>Publish it</strong><span>Use the built-in host, a direct external ZIP URL, or delegate one combined pack to ItemsAdder.</span></div>
   <div class="flow-step"><strong>Place a radio</strong><span>Give a tier item, place it, select a track, and let proximity playback handle listeners.</span></div>
 </div>
 

@@ -29,7 +29,7 @@ The main command is `/radio`; `/pradio` is an alias.
 | `/radio give <player> <tier> [amount]` | Give radio items. | `proximityradio.admin.give` |
 | `/radio reload` | Reload configuration, tiers, tracks, and integrations. | `proximityradio.admin.reload` |
 | `/radio zip` | Scan audio and build the resource pack. | `proximityradio.admin.zip` |
-| `/radio force <all\|player>` | Send the current pack request again. | `proximityradio.admin.force` |
+| `/radio force <all\|player>` | Resend Proximity Radio's pack, or show the matching `/iatexture` command when ItemsAdder owns delivery. | `proximityradio.admin.force` |
 | `/radio tier list` | List loaded radio tiers. | `proximityradio.admin.tier` |
 | `/radio tier create <id>` | Create a custom radio tier (Pro only). | `proximityradio.admin.tier` |
 | `/radio diagnose` | Display environment, integration, tool, pack, and URL status. | `proximityradio.admin.diagnose` |
@@ -45,7 +45,7 @@ The main command is `/radio`; `/pradio` is an alias.
 | `proximityradio.admin.give` | Operators | Give radio items. |
 | `proximityradio.admin.reload` | Operators | Reload the plugin configuration. |
 | `proximityradio.admin.zip` | Operators | Build the resource pack. |
-| `proximityradio.admin.force` | Operators | Force resource-pack delivery. |
+| `proximityradio.admin.force` | Operators | Force resource-pack delivery or obtain the delegated ItemsAdder resend command. |
 | `proximityradio.admin.tier` | Operators | List and create tiers. |
 | `proximityradio.admin.diagnose` | Operators | View diagnostics. |
 | `proximityradio.admin.break` | Operators | Bypass ownership and WorldGuard checks while breaking radios. |

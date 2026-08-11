@@ -21,3 +21,5 @@ Each message has its own placeholders. Keep the placeholders from the original l
 ## Resource-pack disconnect text
 
 The normal resource-pack prompt, success notification, and disconnect messages remain configurable. The 20-second default grace period is controlled by `config.yml`, not `messages.yml`.
+
+When ItemsAdder integration is active, `zip-itemsadder-exported`, `zip-itemsadder-rebuild-started`, and `force-itemsadder-managed` control the administrator instructions shown after exporting or requesting a resend. ItemsAdder controls the actual decline and download-failure kick text while pack delivery is delegated.

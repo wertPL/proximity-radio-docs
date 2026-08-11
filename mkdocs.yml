@@ -71,6 +71,7 @@ nav:
       - Free vs Pro: editions.md
   - Audio & Playback:
       - Tracks and Resource Pack: audio-resource-pack.md
+      - Hosting with ItemsAdder: itemsadder-hosting.md
       - Controls and Synchronization: controls-sync.md
       - Optional Client Mod: client-mod.md
   - Configuration:

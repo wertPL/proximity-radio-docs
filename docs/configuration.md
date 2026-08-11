@@ -73,6 +73,10 @@ This allows the optional client mod to connect. When it is `false`, every player
 
 ```yaml
 integrations:
+  itemsadder:
+    merge-resource-pack: false
+    delegate-resource-pack-delivery: false
+    run-iazip-after-radio-zip: false
   worldguard:
     enabled: true
     admin-bypass: true
@@ -80,7 +84,9 @@ integrations:
     enabled: true
 ```
 
-These options have no effect when the corresponding plugin is not installed. WorldGuard flags are registered during plugin loading, so a full restart is safer than a plugin-manager hot reload after installing WorldGuard.
+On the first configuration generation, the first two ItemsAdder options become `true` automatically when ItemsAdder is already enabled. `run-iazip-after-radio-zip` always defaults to `false`. See [Hosting with ItemsAdder](itemsadder-hosting.md) for the complete workflow.
+
+The WorldGuard and PlaceholderAPI options have no effect when the corresponding plugin is not installed. WorldGuard flags are registered during plugin loading, so a full restart is safer than a plugin-manager hot reload after installing WorldGuard.
 
 ## Debug logging
 

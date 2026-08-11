@@ -102,4 +102,8 @@ resource-pack:
   notify-on-load: false
 ```
 
+When `integrations.itemsadder.delegate-resource-pack-delivery` is active, ItemsAdder controls the vanilla pack URL, prompt, resending, and required-pack behavior. Configure `resource-pack.kick-player-on-decline` in ItemsAdder; it applies to players with and without the optional client mod. Proximity Radio still uses its hosting configuration as the mod's separate audio source.
+
+Follow [Hosting with ItemsAdder](itemsadder-hosting.md) when both plugins are installed. The combined ItemsAdder pack and the optional mod's standalone radio-audio source have different responsibilities.
+
 Vanilla radio playback waits until Minecraft confirms that the pack loaded. When the pack is required, refusal and download failure use the configured grace period before disconnecting the player.

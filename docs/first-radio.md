@@ -38,6 +38,9 @@ The command also creates `tracks.yml`. Track IDs come from normalized filenames,
 
 Choose one hosting mode in `config.yml`.
 
+!!! tip "Using ItemsAdder?"
+    Do not configure a second vanilla pack. Follow [Hosting with ItemsAdder](itemsadder-hosting.md): `/radio zip` exports the radio sounds, `/iazip` builds the combined pack, and ItemsAdder sends it. Proximity Radio's own URL remains necessary only as the optional client mod's separate audio source.
+
 === "External hosting"
 
     Upload `resourcepack.zip` to a web host that returns the ZIP directly, then configure:
@@ -82,7 +85,7 @@ Place the radio head on a valid block. Right-click it to open the control menu, 
 Join without the optional mod and accept the server resource pack. Walk away from the radio and confirm that volume changes with distance.
 
 !!! note "Required pack grace period"
-    By default, a player who declines the required pack or whose download fails is given 20 seconds before being disconnected. Change `resource-pack.required-kick-delay-seconds` if needed.
+    Without delegated ItemsAdder delivery, a player who declines the required pack or whose download fails is given 20 seconds before being disconnected. Change `resource-pack.required-kick-delay-seconds` if needed. With ItemsAdder delegation, configure ItemsAdder's decline and failure policy instead.
 
 ## 6. Optional client mod
 

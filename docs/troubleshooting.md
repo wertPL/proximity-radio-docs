@@ -10,7 +10,7 @@ It reports the Paper and Java versions, loaded tier and track counts, placed rad
 
 ## Players do not receive the pack
 
-Check:
+Without ItemsAdder delegation, check:
 
 1. `resource-pack.send-on-join` is `true`, or run `/radio force <player>`.
 2. A pack has been built with `/radio zip`.
@@ -18,6 +18,17 @@ Check:
 4. Opening the URL downloads the ZIP directly.
 5. The SHA-1 and URL shown by `/radio diagnose` match the current file.
 6. A proxy or host is not caching an older ZIP.
+
+With ItemsAdder delegation, check:
+
+1. `/radio diagnose` reports `ItemsAdder pack delivery: DELEGATED`.
+2. `/radio zip` exported `assets/proximityradio` into ItemsAdder's `contents/proximityradio` folder.
+3. `/iazip` completed after the latest `/radio zip`.
+4. ItemsAdder is configured to apply its pack to joining players.
+5. `/iatexture <player>` resends the combined pack.
+6. The ItemsAdder self-host URL or external-host URL downloads the current `generated.zip`.
+
+See [Hosting with ItemsAdder](itemsadder-hosting.md) for the complete command order and hosting examples.
 
 ## Players are disconnected too early
 
@@ -29,6 +40,16 @@ resource-pack:
 ```
 
 Increase it for slow hosting. Setting it to `0` makes failure immediate.
+
+When ItemsAdder owns delivery, this Proximity Radio delay is ignored. Configure ItemsAdder's `kick-player-on-decline` and `kick-player-on-fail` behavior instead.
+
+## ItemsAdder works but radio sounds are missing
+
+1. Run `/radio zip` before `/iazip`.
+2. Confirm `plugins/ItemsAdder/contents/proximityradio/resourcepack/assets/proximityradio/sounds.json` exists.
+3. Check that the track OGG files exist below the exported `sounds/tracks/` folder.
+4. Run `/iazip`, then `/iatexture <player>`.
+5. For external hosting, upload the newly generated ItemsAdder ZIP and avoid a stale cached URL.
 
 ## Built-in server works only locally
 

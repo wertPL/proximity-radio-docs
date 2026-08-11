@@ -9,7 +9,7 @@ Proximity Radio is a Paper plugin. Players can join with a normal Minecraft clie
 | Server | Paper `1.21.7` and newer |
 | Java | Java `21` |
 | Client | Vanilla Minecraft, or the optional Proximity Radio Client |
-| Optional plugins | WorldGuard and PlaceholderAPI |
+| Optional plugins | ItemsAdder, WorldGuard, and PlaceholderAPI |
 
 Purpur builds based on a compatible Paper version will usually work, but Paper is the primary target. Spigot is not a supported target because the plugin is built against Paper APIs.
 
@@ -17,8 +17,8 @@ Purpur builds based on a compatible Paper version will usually work, but Paper i
 
 1. Stop the Minecraft server.
 2. Put **one** edition JAR into the server's `plugins/` directory:
-    - `ProximityRadioFree-1.0.0.jar`, or
-    - `ProximityRadioPro-1.0.0.jar`.
+    - `ProximityRadioFree-1.0.1.jar`, or
+    - `ProximityRadioPro-1.0.1.jar`.
 3. Start the server once.
 4. Confirm that the console reports `Proximity Radio ... enabled`.
 5. Stop the server before the initial configuration.
@@ -49,7 +49,9 @@ Install these like normal Paper plugins before enabling their integration:
 - **WorldGuard** — build checks plus separate place, use, and break flags.
 - **PlaceholderAPI** — exposes nearby-radio and playback placeholders.
 
-Custom crafting ingredients may also resolve items from Nexo, Oraxen, ItemsAdder, and MythicMobs when those plugins are installed.
+ItemsAdder provides exact custom crafting ingredients and can own one combined hosted resource pack. Both Free and Pro export the radio sound namespace and support delegated pack delivery.
+
+For a combined pack, continue to [Hosting with ItemsAdder](itemsadder-hosting.md) after the first server start.
 
 ## Next step
 
