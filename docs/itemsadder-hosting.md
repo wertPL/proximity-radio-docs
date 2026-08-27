@@ -7,7 +7,7 @@ Both Proximity Radio Free and Pro can add their generated sounds to the ItemsAdd
 | Client path | Pack owner | Purpose |
 | --- | --- | --- |
 | Every player | ItemsAdder | Combined Minecraft pack containing ItemsAdder assets and `assets/proximityradio` sounds. |
-| Optional Proximity Radio Client | Proximity Radio | Separate radio-audio source used by the client mod for timestamped playback. |
+| Optional Proximity Radio Client | ItemsAdder | The mod automatically downloads the same combined ZIP and extracts the required `assets/proximityradio` track. |
 
 If the optional client mod is disabled, only the ItemsAdder host needs to be public. Menus, permissions, placed radios, holograms, and controls work independently of the hosting method.
 
@@ -100,41 +100,20 @@ plugins/ItemsAdder/contents/proximityradio/resourcepack/assets/proximityradio/
 
 If `run-iazip-after-radio-zip` is `true`, the second command is dispatched automatically. External hosting still requires uploading the new `generated.zip` when the chosen provider does not upload it automatically.
 
-## 4. Configure the optional client mod audio source
+## 4. Optional client mod audio source
 
-ItemsAdder sends the combined Minecraft pack to players with and without the optional mod. The mod's timestamped radio audio still uses Proximity Radio's own configured source.
+No second audio host is required. When both `merge-resource-pack` and `delegate-resource-pack-delivery` are active, Proximity Radio obtains the current pack URL from the official ItemsAdder API. The client mod downloads that combined ZIP and extracts the requested `assets/proximityradio/sounds/tracks/<track>.ogg` file.
 
-=== "Built-in radio audio host"
+ItemsAdder's optional URL hash is retained as the mod cache version but removed from the HTTP request itself. Rebuilding and republishing the ItemsAdder pack can therefore invalidate cached track audio without creating a second host.
 
-    ```yaml
-    resource-pack:
-      hosting-mode: BUILTIN
-      builtin:
-        port: 8123
-        public-url: "https://radio.example.com/resourcepack.zip"
-    ```
+The `resource-pack.hosting-mode` URL configured in Proximity Radio remains a fallback. It is used when delivery is not delegated or ItemsAdder has not published a valid HTTP/HTTPS pack URL yet. A warning is written to the server log when this fallback is needed.
 
-    Expose this second TCP port or route the public URL to it. The mod obtains direct `/audio/<track>.ogg` responses from this host.
+If the client mod is disabled, no additional action is required:
 
-=== "External radio audio host"
-
-    ```yaml
-    resource-pack:
-      hosting-mode: EXTERNAL
-      external:
-        url: "https://cdn.example.com/proximity-radio/resourcepack.zip"
-    ```
-
-    Upload the standalone ZIP created at `plugins/<edition>/resourcepack/resourcepack.zip`. Keep this URL separate from ItemsAdder's combined `generated.zip`.
-
-=== "No optional client mod"
-
-    ```yaml
-    client-mod:
-      enabled: false
-    ```
-
-    With every player using vanilla playback through ItemsAdder, the standalone Proximity Radio URL does not need to be public.
+```yaml
+client-mod:
+  enabled: false
+```
 
 ## 5. Verify the setup
 

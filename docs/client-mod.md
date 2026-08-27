@@ -33,11 +33,11 @@ The direct client page is also available through `/radio mod`.
 
 ## Resource-pack relationship
 
-Normally, the client mod does not require a second audio host. It reads the URL configured in Proximity Radio and obtains the required OGG track from it.
+Normally, the client mod does not require a second audio host. It obtains the required OGG track from the pack URL selected by the server.
 
 In `EXTERNAL` mode, the configured URL must return the standalone generated radio ZIP directly. In `BUILTIN` mode, the mod uses the plugin's direct `/audio/<track>.ogg` endpoint.
 
-When ItemsAdder owns resource-pack delivery, it sends the combined pack to players with and without the optional client mod, so its models and textures remain available. The client mod continues to obtain radio audio from Proximity Radio's separate configured source instead of treating the larger combined ItemsAdder ZIP as its track archive.
+When ItemsAdder owns resource-pack delivery, Proximity Radio reads the current combined-pack URL through the official ItemsAdder API. The client mod downloads that ZIP and extracts its `assets/proximityradio` track. If ItemsAdder has no valid URL yet, the mod falls back to the hosting source configured in Proximity Radio and the server logs a warning.
 
 See [Hosting with ItemsAdder](itemsadder-hosting.md) for both hosting paths and the exact rebuild order.
 

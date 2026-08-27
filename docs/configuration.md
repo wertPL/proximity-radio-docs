@@ -41,6 +41,7 @@ resource-pack:
 - `join-delay-ticks` delays that offer after login.
 - `notify-on-load` sends the configurable success message.
 - `hosting-mode` accepts `BUILTIN` or `EXTERNAL`.
+- When ItemsAdder owns pack delivery, the optional client mod automatically uses ItemsAdder's combined-pack URL; these hosting fields remain the fallback.
 
 See [Tracks and Resource Pack](audio-resource-pack.md) for hosting setup.
 
