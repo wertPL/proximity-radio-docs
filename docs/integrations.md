@@ -49,7 +49,7 @@ Identifier: `proximityradio`
 | --- | --- |
 | `%proximityradio_modded%` | `true` when the player has a compatible client mod. |
 | `%proximityradio_nearby%` | `true` when a radio is in range. |
-| `%proximityradio_radio_id%` | UUID of the nearby placed radio. |
+| `%proximityradio_radio_id%` | UUID of the nearby logical radio; connected speakers return the same controller UUID. |
 | `%proximityradio_tier%` | Tier ID. |
 | `%proximityradio_state%` | `PLAYING` or `STOPPED`. |
 | `%proximityradio_track%` | Current track title. |

@@ -73,6 +73,7 @@ nav:
       - Tracks and Resource Pack: audio-resource-pack.md
       - Hosting with ItemsAdder: itemsadder-hosting.md
       - Controls and Synchronization: controls-sync.md
+      - Connected Radios: connected-radios.md
       - Optional Client Mod: client-mod.md
   - Configuration:
       - Main Configuration: configuration.md

@@ -44,9 +44,12 @@ access:
   control-permission: "proximityradio.use"
   control: TRUSTED_PLAYERS
   break-owner-only: true
+  allow-connect: true
 ```
 
 `control` accepts `ADMIN_ONLY`, `TRUSTED_PLAYERS`, or `ALL`. Administrative break permission always bypasses owner-only breaking.
+
+`allow-connect` lets an owner merge this tier's radios with `/radio connect`. Both radios must have the same tier and be owned by that player. `proximityradio.admin.connect` bypasses ownership and this setting, but never the same-tier requirement. Existing tier files without this key default to `false`. See [Connected Radios](connected-radios.md).
 
 ## Playback
 
