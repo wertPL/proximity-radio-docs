@@ -18,7 +18,7 @@ The main command is `/radio`; `/pradio` is an alias.
 | `/radio trust <radio-id> list` | List trusted players for an owned radio. |
 | `/radio trust <radio-id> add <player>` | Trust a player on one owned radio. |
 | `/radio trust <radio-id> remove <player>` | Remove trust from one owned radio. |
-| `/radio connect <source-id> <target-id>` | Pro only: merge owned same-tier radios when the tier enables owner connections. In Free, the command displays the Pro upgrade link. |
+| `/radio connect <source-id> <target-id>` | Pro only: merge owned same-tier radios when the tier enables owner connections. |
 | `/radio queue list` | Show the nearby radio queue. |
 | `/radio queue add <track>` | Add a track to the queue. |
 | `/radio queue clear` | Clear the queue. |
@@ -58,6 +58,6 @@ The top-level `proximityradio.admin` node is convenient for operators. For staff
 
 ## Console use
 
-Administrative commands such as `zip`, `reload`, `force`, `tier`, `diagnose`, and Pro's `connect` can be run from the console. Player-context commands require an in-game player. In Free, `/radio connect` only displays the Pro upgrade message.
+Administrative commands such as `zip`, `reload`, `force`, `tier`, `diagnose`, and Pro's `connect` can be run from the console. Player-context commands require an in-game player.
 
 See [Connected Radios](connected-radios.md) for source/target behavior, owner rules, and recovery when a controller is removed.

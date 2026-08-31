@@ -11,7 +11,7 @@ Free and Pro play audio in the same way and support the same client mod and inte
       <tr><td>Radio tiers</td><td><span class="table-limit">Default and Admin</span></td><td><span class="table-pro">Unlimited custom tiers</span></td></tr>
       <tr><td>Track library</td><td><span class="table-limit">Up to 12 tracks</span></td><td><span class="table-pro">Unlimited</span></td></tr>
       <tr><td>Maximum track length</td><td><span class="table-limit">6 minutes</span></td><td><span class="table-pro">No edition limit</span></td></tr>
-      <tr><td>Connected radio groups</td><td><span class="table-limit">Upgrade link only</span></td><td><span class="table-pro">Included</span></td></tr>
+      <tr><td>Connected radio groups</td><td><span class="table-limit">—</span></td><td><span class="table-pro">Included</span></td></tr>
     </tbody>
   </table>
 </div>
