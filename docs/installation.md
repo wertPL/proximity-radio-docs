@@ -17,8 +17,8 @@ Purpur builds based on a compatible Paper version will usually work, but Paper i
 
 1. Stop the Minecraft server.
 2. Put **one** edition JAR into the server's `plugins/` directory:
-    - `ProximityRadioFree-1.0.1.jar`, or
-    - `ProximityRadioPro-1.0.1.jar`.
+    - `ProximityRadioFree-1.1.0.jar`, or
+    - `ProximityRadioPro-1.1.0.jar`.
 3. Start the server once.
 4. Confirm that the console reports `Proximity Radio ... enabled`.
 5. Stop the server before the initial configuration.

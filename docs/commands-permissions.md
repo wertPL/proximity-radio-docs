@@ -18,7 +18,7 @@ The main command is `/radio`; `/pradio` is an alias.
 | `/radio trust <radio-id> list` | List trusted players for an owned radio. |
 | `/radio trust <radio-id> add <player>` | Trust a player on one owned radio. |
 | `/radio trust <radio-id> remove <player>` | Remove trust from one owned radio. |
-| `/radio connect <source-id> <target-id>` | Merge owned same-tier radios when the tier enables owner connections. |
+| `/radio connect <source-id> <target-id>` | Pro: merge owned same-tier radios when the tier enables owner connections. Free: display the Pro upgrade link only. |
 | `/radio queue list` | Show the nearby radio queue. |
 | `/radio queue add <track>` | Add a track to the queue. |
 | `/radio queue clear` | Clear the queue. |
@@ -34,7 +34,7 @@ The main command is `/radio`; `/pradio` is an alias.
 | `/radio tier list` | List loaded radio tiers. | `proximityradio.admin.tier` |
 | `/radio tier create <id>` | Create a custom radio tier (Pro only). | `proximityradio.admin.tier` |
 | `/radio diagnose` | Display environment, integration, tool, pack, and URL status. | `proximityradio.admin.diagnose` |
-| `/radio connect <source-id> <target-id>` | Connect compatible radios regardless of ownership and tier opt-in. | `proximityradio.admin.connect` |
+| `/radio connect <source-id> <target-id>` | Pro only: connect compatible radios regardless of ownership and tier opt-in. | `proximityradio.admin.connect` |
 
 ## Permission nodes
 
@@ -52,12 +52,12 @@ The main command is `/radio`; `/pradio` is an alias.
 | `proximityradio.admin.diagnose` | Operators | View diagnostics. |
 | `proximityradio.admin.break` | Operators | Bypass ownership and WorldGuard checks while breaking radios. |
 | `proximityradio.admin.control` | Operators | Control administrator-restricted radios. |
-| `proximityradio.admin.connect` | Operators | Connect same-tier radios regardless of ownership and `allow-connect`. |
+| `proximityradio.admin.connect` | Operators (Pro only) | Connect same-tier radios regardless of ownership and `allow-connect`. This node is not registered by Free. |
 
 The top-level `proximityradio.admin` node is convenient for operators. For staff ranks, grant individual nodes so control and break access stay separate.
 
 ## Console use
 
-Administrative commands such as `zip`, `reload`, `force`, `tier`, `diagnose`, and `connect` can be run from the console. Player-context commands require an in-game player.
+Administrative commands such as `zip`, `reload`, `force`, `tier`, `diagnose`, and Pro's `connect` can be run from the console. Player-context commands require an in-game player. Free accepts `connect` from either context but only shows the Pro upgrade message.
 
 See [Connected Radios](connected-radios.md) for source/target behavior, owner rules, and recovery when a controller is removed.

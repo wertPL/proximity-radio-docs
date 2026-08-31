@@ -73,7 +73,7 @@ The server keeps one playback state for each radio. It sends normal Minecraft so
   </article>
   <article class="edition-card edition-card--pro">
     <h3>Pro</h3>
-    <p>Build unlimited music libraries and create as many fully configurable radio tiers as your server design requires.</p>
+    <p>Build unlimited music libraries, create fully configurable tiers, and synchronize multiple speakers as one connected radio group.</p>
   </article>
 </div>
 

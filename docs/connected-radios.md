@@ -1,6 +1,9 @@
 # Connected Radios
 
-Version 1.1.0 can turn multiple placed radios into synchronized speakers controlled as one logical radio.
+Proximity Radio Pro 1.1.0 can turn multiple placed radios into synchronized speakers controlled as one logical radio.
+
+!!! info "Pro feature"
+    Connected radio groups are available only in Pro. The Free edition keeps `/radio connect` as an informational command and displays a clickable [Pro upgrade link](https://builtbybit.com/resources/proximity-radio-pro.117753/) without changing radio data.
 
 ## Connect two radios
 

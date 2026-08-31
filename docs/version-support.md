@@ -1,6 +1,6 @@
 # Version Support
 
-Current server-plugin release: `1.0.1` for both Free and Pro.
+Current server-plugin release: `1.1.0` for both Free and Pro.
 
 ## Server compatibility
 
@@ -23,6 +23,8 @@ The client mod must match:
 
 - the player's Minecraft version;
 - the correct mod loader and dependencies.
+
+Current client-mod release: `1.0.1`. Plugin 1.1.0 does not require a client-mod update.
 
 If the mod is incompatible, the player uses vanilla resource-pack playback instead.
 
