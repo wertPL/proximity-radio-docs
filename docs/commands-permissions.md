@@ -9,6 +9,8 @@ The main command is `/radio`; `/pradio` is an alias.
 | `/radio help` | Show available commands. |
 | `/radio mute [on\|off]` | Mute or unmute all radios for yourself. |
 | `/radio streamermode [on\|off]` | Alias for global personal mute. |
+| `/radio desyncalert <on\|off>` | Enable or disable your desynchronization chat alerts. |
+| `/radio syncalert <on\|off>` | Enable or disable your synchronization chat alerts. |
 | `/radio volume <0-100>` | Set your global personal radio volume. |
 | `/radio info` | Show information about the nearest radio. |
 | `/radio status` | Show mute, client, nearby-radio, and playback status. |
@@ -58,6 +60,6 @@ The top-level `proximityradio.admin` node is convenient for operators. For staff
 
 ## Console use
 
-Administrative commands such as `zip`, `reload`, `force`, `tier`, `diagnose`, and Pro's `connect` can be run from the console. Player-context commands require an in-game player.
+Administrative commands such as `zip`, `reload`, `force`, `tier`, `diagnose`, and Pro's `connect` can be run from the console. Player-context commands require an in-game player. Alert preferences default to `on`, are stored globally per player, and persist across restarts.
 
 See [Connected Radios](connected-radios.md) for source/target behavior, owner rules, and recovery when a controller is removed.

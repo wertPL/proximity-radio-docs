@@ -44,6 +44,24 @@ Skipping, selecting another track, stopping, or starting a full track creates a 
 
 Seeking is different: modded listeners can move immediately, but vanilla listeners cannot. When vanilla listeners are nearby, the UI requests confirmation and shows the next synchronization state.
 
+## Synchronization chat alerts
+
+Vanilla listeners can receive two independent kinds of chat alert:
+
+- desynchronization alerts when their local playback cannot match the server timeline;
+- synchronization alerts when playback reaches a shared synchronization point again.
+
+Both preferences default to enabled. Players can change their global, persistent preferences with:
+
+```text
+/radio desyncalert on|off
+/radio syncalert on|off
+```
+
+Each tier can also enable or disable either alert category with `playback.desynchronization-alert` and `playback.synchronization-alert`. An alert is sent only when both the tier setting and the player's matching preference are enabled.
+
+`/radio mute` and `/radio streamermode` temporarily suppress both kinds of chat alert while radio audio is muted. They do not change either saved alert preference. These controls affect chat only: radio-menu synchronization details and the action bar remain available according to their normal settings.
+
 ## Positional behavior
 
 ```yaml
@@ -66,4 +84,3 @@ The optional client reproduces configured falloff more accurately. Vanilla playb
 `pause-when-empty` can pause a radio when no listeners remain inside `empty-check-radius`.
 
 `disable-on-server-restart: true` leaves a placed radio stopped after restart. Set it to `false` to restore the saved playing state and position.
-

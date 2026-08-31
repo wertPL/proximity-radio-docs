@@ -67,7 +67,13 @@ playback:
   empty-check-radius: 32.0
   allowed-tracks: ["*"]
   vanilla-join-behavior: WAIT_FOR_SYNC
+  desynchronization-alert: true
+  synchronization-alert: true
 ```
+
+`desynchronization-alert` controls chat messages sent to vanilla listeners when their playback no longer matches the radio timeline. `synchronization-alert` independently controls chat messages sent when their playback synchronizes again. Both default to `true`, including for existing tier files where the keys are absent. Player preferences can further suppress either category; see [Controls and Synchronization](controls-sync.md#synchronization-chat-alerts).
+
+These settings affect chat alerts only. They do not hide synchronization information in the radio menu or action bar.
 
 Use explicit track IDs instead of `"*"` to create a restricted station:
 
