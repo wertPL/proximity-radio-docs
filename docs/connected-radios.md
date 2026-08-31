@@ -1,6 +1,6 @@
 # Connected Radios
 
-Proximity Radio Pro 1.1.0 can turn multiple placed radios into synchronized speakers controlled as one logical radio.
+Multiple placed radios can work as synchronized speakers controlled as one logical radio.
 
 !!! info "Pro feature"
     Connected radio groups are available only in Pro.
@@ -46,4 +46,4 @@ Connections are stored in `data/radios.yml` and restored after restart. Invalid 
 
 Breaking a satellite removes only that physical speaker. If the controlling target radio is broken while other speakers remain, one remaining speaker is promoted automatically. The group keeps its public ID, owner, playback position, settings, and remaining connections.
 
-Install Proximity Radio Client `1.1.0` for modded listeners using connected radio groups. It reuses decoded audio across the group's physical sources and compensates for local loading time, keeping automatic track transitions on the shared timeline.
+For modded listeners, the client mod reuses decoded audio across the group's physical sources and compensates for local loading time, keeping automatic track transitions on the shared timeline.

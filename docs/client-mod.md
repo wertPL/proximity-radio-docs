@@ -32,7 +32,9 @@ When disabled, every player uses the vanilla resource-pack behavior even if the 
 
 The direct client page is also available through `/radio mod`.
 
-Plugin `1.1.0` requires client mod `1.1.0`. Earlier client builds are treated as incompatible and safely fall back to vanilla playback. The update also prevents each physical source in a Pro connected group from starting after a different local decoding delay.
+The plugin and client mod must use compatible protocol versions. Incompatible client builds safely fall back to vanilla playback.
+
+In Pro connected groups, the client keeps every physical source on the same playback timeline.
 
 ## Resource-pack relationship
 
