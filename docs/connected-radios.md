@@ -46,4 +46,4 @@ Connections are stored in `data/radios.yml` and restored after restart. Invalid 
 
 Breaking a satellite removes only that physical speaker. If the controlling target radio is broken while other speakers remain, one remaining speaker is promoted automatically. The group keeps its public ID, owner, playback position, settings, and remaining connections.
 
-The optional client mod does not require a separate 1.1.0 update for this feature. Each physical radio was already represented as an independent positional audio source; the server now synchronizes their shared state.
+Install Proximity Radio Client `1.1.0` for modded listeners using connected radio groups. It reuses decoded audio across the group's physical sources and compensates for local loading time, keeping automatic track transitions on the shared timeline.

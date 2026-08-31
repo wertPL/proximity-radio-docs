@@ -24,7 +24,7 @@ The client mod must match:
 - the player's Minecraft version;
 - the correct mod loader and dependencies.
 
-Current client-mod release: `1.0.1`. Plugin 1.1.0 does not require a client-mod update.
+Current client-mod release: `1.1.0`. Plugin and client mod 1.1.0 use protocol 3. Older client builds are treated as incompatible and safely fall back to vanilla playback.
 
 If the mod is incompatible, the player uses vanilla resource-pack playback instead.
 

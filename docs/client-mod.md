@@ -10,6 +10,7 @@
 - mod-side spatial and directional playback;
 - local extraction of track audio from the same generated resource-pack ZIP;
 - correct stop behavior when disconnecting from the server.
+- synchronized automatic track transitions across Pro connected radio speakers.
 
 The server still controls the radio. The mod cannot add tracks, tiers, or change playback without a server command.
 
@@ -30,6 +31,8 @@ When disabled, every player uses the vanilla resource-pack behavior even if the 
 4. Run `/radio status` and check that the client is detected.
 
 The direct client page is also available through `/radio mod`.
+
+Plugin `1.1.0` requires client mod `1.1.0`. Earlier client builds are treated as incompatible and safely fall back to vanilla playback. The update also prevents each physical source in a Pro connected group from starting after a different local decoding delay.
 
 ## Resource-pack relationship
 
