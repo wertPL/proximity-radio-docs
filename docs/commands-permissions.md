@@ -18,7 +18,7 @@ The main command is `/radio`; `/pradio` is an alias.
 | `/radio trust <radio-id> list` | List trusted players for an owned radio. |
 | `/radio trust <radio-id> add <player>` | Trust a player on one owned radio. |
 | `/radio trust <radio-id> remove <player>` | Remove trust from one owned radio. |
-| `/radio connect <source-id> <target-id>` | Pro: merge owned same-tier radios when the tier enables owner connections. Free: display the Pro upgrade link only. |
+| `/radio connect <source-id> <target-id>` | Pro only: merge owned same-tier radios when the tier enables owner connections. In Free, the command displays the Pro upgrade link. |
 | `/radio queue list` | Show the nearby radio queue. |
 | `/radio queue add <track>` | Add a track to the queue. |
 | `/radio queue clear` | Clear the queue. |
@@ -52,12 +52,12 @@ The main command is `/radio`; `/pradio` is an alias.
 | `proximityradio.admin.diagnose` | Operators | View diagnostics. |
 | `proximityradio.admin.break` | Operators | Bypass ownership and WorldGuard checks while breaking radios. |
 | `proximityradio.admin.control` | Operators | Control administrator-restricted radios. |
-| `proximityradio.admin.connect` | Operators (Pro only) | Connect same-tier radios regardless of ownership and `allow-connect`. This node is not registered by Free. |
+| `proximityradio.admin.connect` | Operators (Pro only) | Connect same-tier radios regardless of ownership and `allow-connect`. |
 
 The top-level `proximityradio.admin` node is convenient for operators. For staff ranks, grant individual nodes so control and break access stay separate.
 
 ## Console use
 
-Administrative commands such as `zip`, `reload`, `force`, `tier`, `diagnose`, and Pro's `connect` can be run from the console. Player-context commands require an in-game player. Free accepts `connect` from either context but only shows the Pro upgrade message.
+Administrative commands such as `zip`, `reload`, `force`, `tier`, `diagnose`, and Pro's `connect` can be run from the console. Player-context commands require an in-game player. In Free, `/radio connect` only displays the Pro upgrade message.
 
 See [Connected Radios](connected-radios.md) for source/target behavior, owner rules, and recovery when a controller is removed.

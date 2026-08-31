@@ -49,7 +49,7 @@ access:
 
 `control` accepts `ADMIN_ONLY`, `TRUSTED_PLAYERS`, or `ALL`. Administrative break permission always bypasses owner-only breaking.
 
-`allow-connect` is a Pro-only setting. It lets an owner merge this tier's radios with `/radio connect`. Both radios must have the same tier and be owned by that player. `proximityradio.admin.connect` bypasses ownership and this setting, but never the same-tier requirement. Existing Pro tier files without this key default to `false`. Free ignores this key. See [Connected Radios](connected-radios.md).
+`allow-connect` is a Pro-only setting. It lets an owner merge this tier's radios with `/radio connect`. Both radios must have the same tier and be owned by that player. `proximityradio.admin.connect` bypasses ownership and this setting, but never the same-tier requirement. Existing Pro tier files without this key default to `false`. See [Connected Radios](connected-radios.md).
 
 ## Playback
 
